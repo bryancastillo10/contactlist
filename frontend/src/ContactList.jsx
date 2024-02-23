@@ -4,6 +4,11 @@ import PropTypes from "prop-types";
 const ContactList = ({ contacts, updateContact, updateCallback }) => {
   const onDelete = async (id) => {
     try {
+      const confirmation = window.confirm(
+        "Are you sure you want to delete this contact?"
+      );
+      if (!confirmation) return;
+
       const options = {
         method: "DELETE",
       };
