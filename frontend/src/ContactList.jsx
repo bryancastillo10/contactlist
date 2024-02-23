@@ -33,7 +33,7 @@ const ContactList = ({ contacts }) => {
 };
 
 ContactList.propTypes = {
-  contacts: PropTypes.string,
+  contacts: PropTypes.array,
 };
 
 export default ContactList;
